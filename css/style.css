@@ -10,7 +10,6 @@ body {
 }
 
 main {
-    align-items: center;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -22,7 +21,10 @@ main>section img {
     margin: 15px;
     width: 300px;
 }
-
+.container
+{
+    display: flex;
+}
 main>section button {
     background-color: #00BFFF;
     border: none;
