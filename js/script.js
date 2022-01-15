@@ -27,7 +27,7 @@ pegarPersonagem = () =>
         nomeDoPersonagem.innerHTML= data.name;
         especie.innerHTML = data.species;
         condicao.innerHTML = data.status;
-    });
+        });
 }
 
 botao.onclick = pegarPersonagem;
