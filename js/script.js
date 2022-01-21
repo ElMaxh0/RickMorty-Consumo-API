@@ -1,35 +1,25 @@
-const imagem = document.querySelector('img');
-const botao = document.querySelector('button');
-const nomeDoPersonagem = document.querySelector('#nome');
-const especie = document.querySelector('#especie');
-const condicao = document.querySelector('#status');
 
 function gerarpersonagem (pimgdata,pname, pespecie ,pcondicao , id ){
-    console.log(pimgdata)
-    var personacontainer = document.createElement('div')
-    personacontainer.id =id
-    var imagempersona =document.createElement('img')
-    imagempersona.classList.add("personagempicture")
-    imagempersona.src=pimgdata
-    var title01= document.createElement('h4');
-    title01.textContent=`Nome Do Personagem ${pname}`
-    var especietext = document.createElement('h4');
-    especietext.textContent=`Especie do Personagem ${pespecie}`
-    var condicao = document.createElement('h4');
-    condicao.textContent=`Especie do Personagem ${pcondicao}` 
-    personacontainer.appendChild(imagempersona);
-    personacontainer.appendChild(title01);
-    personacontainer.appendChild(especietext);
-    personacontainer.appendChild(condicao);
-    document.getElementById('personas').appendChild(personacontainer)
+    const imagem = document.getElementById('img'+id);
+    const botao = document.querySelector('button'+id);
+    const nomeDoPersonagem = document.querySelector('#nome'+id);
+    const especie = document.querySelector('#especie'+id);
+    const condicao = document.getElementById('statuns'+id);
+    imagem.src = pimgdata;
+    imagem.alt = pname;
+    nomeDoPersonagem.innerHTML= pname;
+    especie.innerHTML = pespecie;
+    condicao.innerHTML = pcondicao;
 }
+function atribuirvalores(){
 
+}
 gerarValorAleatorio = () => 
 {
     return Math.floor(Math.random()* 671);
 }
 
-pegarPersonagem = () => 
+pegarPersonagem = (i) => 
 {
     let numeroAleatorio = gerarValorAleatorio();
 
@@ -42,20 +32,19 @@ pegarPersonagem = () =>
         }
     }).then((response) => response.json()).then((data) => 
     {
-        var id = gerarValorAleatorio()
-        var dataimage=data.image;
+        var dataimage=data.image
         var dataname= data.name
         var datanomedop=data.name
         var especiedop=data.species
         var condicaodop=data.status
-        console.log(data)
-        gerarpersonagem(dataimage,datanomedop ,especiedop, condicaodop , id );
+        gerarpersonagem(dataimage,datanomedop ,especiedop, condicaodop , i );
         });
 }
- 
 function initial(ttoalp){
     var totaldepersonagensacarrega = ttoalp;
     for (var i = 0; i < (totaldepersonagensacarrega); i++) {
-        pegarPersonagem();
+        pegarPersonagem(i);
      }
+
 }
+
