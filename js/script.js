@@ -85,7 +85,7 @@
     $btn.addEventListener('click', Element =>
     {
         Element.preventDefault();
-        initial(9999999999999999999)
+        initial(3)
         
    });   
       
