@@ -7,46 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conheça Rick and Morty</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-
+   
 </head>
 
 <body>
-
+    <button id="botao">Personagens</button>
     <main>
-        <section>
-            <div class="container">
-                <img id="img0" alt="Imagem do Rick fazendo careta na cara do Morty"
-                    src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
+        <section class="container">
+            <div id="personagemUm">
+                <img id="img0"src="" alt="Imagem do Rick fazendo careta na cara do Morty" />
                     
-                    <ul id="detalhes-container">
-                    <li>Nome: <p id="nome0"></p></li>
-                    <li>Espécie: <p id="especie0"></p> </li>
-                    <li>Está vivo? <p id="condicao0"></p></li>
-                </ul>
-
-                <img id="img1" alt="Imagem do Rick fazendo careta na cara do Morty"
-                src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
-
-                
                 <ul id="detalhes-container">
-                <li>Nome: <p id="nome1"></p></li>
-                <li>Espécie: <p id="especie1"></p> </li>
-                <li>Está vivo? <p id="condicao1"></p></li>
-            </ul>
-
-                <img  id="img2" alt="Imagem do Rick fazendo careta na cara do Morty"
-                src="https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg">
-
-                <ul id="detalhes-container">
-                    <li>Nome: <p id="nome2"></p></li>
-                    <li>Espécie: <p id="especie2"></p> </li>
-                    <li>Está vivo? <p id="condicao2"></p></li>
+                    <li>Nome:  <p id="nome0"></p></li>
+                    <li>Espécie:  <p id="especie0"></p> </li>
+                    <li>Está vivo?  <p id="condicao0"></p></li>
                 </ul>
             </div>
-            <button id="botao" onclick="initial(2)">Conheça um personagem Rick and Morty</button>
+            <div id="personagemDois">
+                <img id="img1" alt="Imagem do Rick fazendo careta 
+                na cara do Morty"
+                src="" />
+
+                <ul id="detalhes-container">
+                <li>Nome:  <p id="nome1"></p></li>
+                <li>Espécie:  <p id="especie1"></p> </li>
+                <li>Está vivo?  <p id="condicao1"></p></li>
+            </ul>
+            </div>
+            <div id="personagemTres">
+                <img  id="img2" alt="Imagem do Rick fazendo careta na cara do Morty"
+                src="">
+
+                <ul id="detalhes-container">
+                    <li>Nome:  <p id="nome2"></p></li>
+                    <li>Espécie:  <p id="especie2"></p> </li>
+                    <li>Está vivo?  <p id="condicao2"></p></li>
+                </ul>
+            </div>
         </section>
     </main>
 </body>
-
+<script src="js/script.js" defer></script>
 </html>
